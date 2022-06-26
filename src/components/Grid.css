@@ -1,0 +1,17 @@
+.grid{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.line{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.tile{
+    border: solid black 1px;
+    width: 30px;
+    height: 30px;
+}

@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import Grid from './components/Grid';
+const GUESSES_NUMBER = 6;
 
-function App() {
+export default function App() {
+  const [solution, setSolution] = useState('WORLD')
+  const [guesses, setGuesses] = useState(new Array(GUESSES_NUMBER))
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app fs-3'>
+      <Grid lines={GUESSES_NUMBER}/>
     </div>
-  );
+  )
 }
-
-export default App;
